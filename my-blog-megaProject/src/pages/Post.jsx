@@ -35,29 +35,29 @@ export default function Post() {
     return post ? (
         <div className="py-8 ">
             <Container>
-                <div className=" flex justify-center mb-4 relative rounded-xl p-2">
+                <div className=" flex flex-col justify-center mb-4 relative rounded-xl p-2">
                     <img
                         src={appwriteService.getFilePreview(post.featuredImage)}
                         alt={post.title}
-                        className="rounded-xl"
+                        className="rounded-xl m-auto"
                         width='400px'
                     />
                 
                 {isAuthor && (
-                    <div className="absolute mr-50">
+                    <div className="mt-10 m-auto">
                         <Link to={`/edit-post/${post.$id}`}>
-                            <Button bgColor="bg-green-500" className="mr-3 hover:cursor-pointer">
+                            <Button bgColor="bg-green-500" className="mr-3 hover:cursor-pointer hover:bg-green-400">
                                 Edit
                             </Button>
                         </Link>
-                        <Button bgColor="bg-red-500" className="hover:cursor-pointer" onClick={deletePost}>
+                        <Button bgColor="bg-red-500" className="hover:cursor-pointer hover:bg-red-400" onClick={deletePost}>
                             Delete
                         </Button>
                     </div>
                 )}
                 </div>
                 <div className="w-full mb-6 text-center">
-                    <h1 className="text-2xl font-bold text-white">{post.title}</h1>
+                    <h1 className="text-2xl font-bold text-white ">{post.title}</h1>
                 </div>
                 <div className="browser-css text-white ">
                     {parse(post.content)}
