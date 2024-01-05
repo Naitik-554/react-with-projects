@@ -20,7 +20,7 @@ function Home() {
                <div className="flex flex-wrap">
                      <div className="p-2 w-full">
                         <h1 className="text-2xl font-bold hover:text-pink-500">
-                           No Posts to read
+                           Login/Signup to read blogs
                         </h1>
                      </div>
                </div>
